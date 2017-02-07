@@ -3,4 +3,6 @@
 angular.module('webshop', [
   'ngRoute',
   'home',
+  'phones',
+  'core'
 ]);

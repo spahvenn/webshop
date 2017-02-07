@@ -15,7 +15,6 @@
 
   <!-- Custom styles for this template -->
   <link href="app.css" rel="stylesheet">
-  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body>
 
@@ -46,6 +45,7 @@
   </nav>
 
   <div class='container'>
+
     <div ng-view></div>
 
     <hr>
@@ -58,11 +58,23 @@
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
   -->
   <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="app.module.js"></script>
   <script src="app.config.js"></script>
+
+
+  <script src="core/core.module.js"></script>
+
+  <script src="core/phone/phone.module.js"></script>
+  <script src="core/phone/phone.service.js"></script>
+
+  <script src="phones/phones.module.js"></script>
+  <script src="phones/phones.component.js"></script>
+
   <script src="home/home.module.js"></script>
   <script src="home/home.component.js"></script>
+
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>
   <script src="components/version/interpolate-filter.js"></script>

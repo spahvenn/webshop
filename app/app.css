@@ -2,6 +2,32 @@
 
 /* Move down content because we have a fixed navbar that is 50px tall */
 body {
-  padding-top: 50px;
+  padding-top: 60px;
   padding-bottom: 20px;
+}
+
+.phone-list-item {
+}
+
+.phone-list-item a > img {
+  height: 300px;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 992px) {
+  .phone-list-item a > img {
+      height: 120px;
+  }
+  .phone-list-item {
+    height: 300px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .phone-list-item a > img {
+      height: 150px;
+  }
+  .phone-list-item {
+    height: 300px;
+  }
 }

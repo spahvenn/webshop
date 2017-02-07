@@ -9,9 +9,8 @@ angular.
       $routeProvider.when('/home', {
           template: '<home></home>'
       })
-      .when('/view1', {
-        templateUrl: 'view1/view1.html',
-        controller: 'View1Ctrl'
+      .when('/phones', {
+        template: '<phones></phones>'
       })
       .otherwise({redirectTo: '/home'});
     }

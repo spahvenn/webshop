@@ -9,6 +9,11 @@ body {
 .phone-list-item {
 }
 
+.phone-images img {
+  display: block;
+  margin: auto;
+}
+
 .phone-list-item a > img {
   height: 300px;
   margin-bottom: 10px;

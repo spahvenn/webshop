@@ -4,6 +4,7 @@ angular.module('webshop', [
   'ngRoute',
   'home',
   'phones',
+  'phoneDetail',
   'core',
   'ngAnimate'
 ]);

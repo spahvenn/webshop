@@ -15,6 +15,9 @@ angular.
       .when('/phones/:phoneId', {
         template: '<phone-detail></phone-detail>'
       })
+      .when('/shopping-cart', {
+        template: '<shopping-cart></shopping-cart>'
+      })
       .otherwise({redirectTo: '/home'});
     }
   ]);

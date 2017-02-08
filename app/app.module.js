@@ -5,6 +5,7 @@ angular.module('webshop', [
   'home',
   'phones',
   'phoneDetail',
+  'shoppingCart',
   'core',
   'ngAnimate'
 ]);

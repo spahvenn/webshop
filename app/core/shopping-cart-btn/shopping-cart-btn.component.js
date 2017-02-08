@@ -9,18 +9,31 @@ angular.
       function ShoppingCartBtnController($routeParams, $cookies) {
 
         var self = this;
-        var phoneId = $routeParams.phoneId
-        var cookie = $cookies.getObject(phoneId);
+        this.phoneId = $routeParams.phoneId
+        this.shoppingCartObject = $cookies.getObject('shoppingCart');
 
-        if (!cookie) {
+        var itemData = null;
+        if (this.shoppingCartObject) {
+          itemData = this.shoppingCartObject.hasOwnProperty(this.phoneId) ? this.shoppingCartObject[this.phoneId] : null;
+        }
+
+        if (!itemData) {
           this.itemAmount = 0;
         } else {
-          this.itemAmount = cookie.amount;
+          this.itemAmount = itemData.amount;
         }
 
         this.addToCart = function() {
           self.itemAmount += 1;
-          $cookies.putObject(phoneId, {phoneId: phoneId, amount: self.itemAmount});
+          if (!self.shoppingCartObject) {
+            self.shoppingCartObject = {};
+          }
+          if (!self.shoppingCartObject.hasOwnProperty(this.phoneId)) {
+            self.shoppingCartObject[this.phoneId] = {};
+          }
+          self.shoppingCartObject[this.phoneId].phoneId = this.phoneId;
+          self.shoppingCartObject[this.phoneId].amount = self.itemAmount;
+          $cookies.putObject('shoppingCart', this.shoppingCartObject);
         }
 
       }

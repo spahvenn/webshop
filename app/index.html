@@ -15,6 +15,8 @@
 
   <!-- Custom styles for this template -->
   <link href="app.css" rel="stylesheet">
+  <link rel="stylesheet" href="app.animations.css" />
+
 </head>
 <body>
 
@@ -35,9 +37,9 @@
       </div>
       <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
       <ul class="nav navbar-nav">
-        <li><a href="#about">Phones</a></li>
-        <li><a href="#contact">Accessories</a></li>
-        <li><a href="#contact">Warranty</a></li>
+        <li><a href="/#!/phones">Phones</a></li>
+        <!--<li><a href="#contact">Accessories</a></li>
+        <li><a href="#contact">Warranty</a></li> -->
         </li>
       </ul>
     </div>
@@ -46,18 +48,23 @@
 
   <div class='container'>
 
-    <div ng-view></div>
+    <div class="view-container">
+      <div ng-view class="view-frame"></div>
+    </div>
 
     <hr>
 
     <footer>
       <p>&copy; 2017 Sami Ahvenniemi</p>
     </footer>
+
   </div>
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
   -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
   <script src="bower_components/angular-resource/angular-resource.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="app.module.js"></script>

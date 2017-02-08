@@ -9,6 +9,14 @@ body {
 .phone-list-item {
 }
 
+.add-to-cart-btn {
+  margin-bottom: 10px;
+}
+
+.bg-info {
+    padding: 15px;
+}
+
 .phone-images img {
   display: block;
   margin: auto;

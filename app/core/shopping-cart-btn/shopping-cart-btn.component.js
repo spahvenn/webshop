@@ -10,30 +10,38 @@ angular.
 
         var self = this;
         this.phoneId = $routeParams.phoneId
-        this.shoppingCartObject = $cookies.getObject('shoppingCart');
+        this.shoppingCartItems = $cookies.getObject('shoppingCartItems');
 
-        var itemData = null;
-        if (this.shoppingCartObject) {
-          itemData = this.shoppingCartObject.hasOwnProperty(this.phoneId) ? this.shoppingCartObject[this.phoneId] : null;
+        this.itemData = null;
+
+        if (this.shoppingCartItems) {
+          self.itemData = _.find(this.shoppingCartItems, function(item) {
+            return item.id === self.phoneId;
+          })
         }
 
-        if (!itemData) {
+        if (!this.itemData) {
           this.itemAmount = 0;
         } else {
-          this.itemAmount = itemData.amount;
+          this.itemAmount = this.itemData.amount;
         }
 
         this.addToCart = function() {
           self.itemAmount += 1;
-          if (!self.shoppingCartObject) {
-            self.shoppingCartObject = {};
+          if (!self.shoppingCartItems) {
+            self.shoppingCartItems = [];
           }
-          if (!self.shoppingCartObject.hasOwnProperty(this.phoneId)) {
-            self.shoppingCartObject[this.phoneId] = {};
+          if (!self.itemData) {
+            self.itemData = {};
           }
-          self.shoppingCartObject[this.phoneId].phoneId = this.phoneId;
-          self.shoppingCartObject[this.phoneId].amount = self.itemAmount;
-          $cookies.putObject('shoppingCart', this.shoppingCartObject);
+
+          if (_.isEmpty(self.itemData)) {
+            self.shoppingCartItems.push({id: this.phoneId, amount: 1});
+          } else {
+            self.itemData.amount += 1;
+          }
+
+          $cookies.putObject('shoppingCartItems', this.shoppingCartItems);
         }
 
       }

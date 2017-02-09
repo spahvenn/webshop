@@ -10,6 +10,10 @@ body {
   font-weight: bold;
 }
 
+#shopping-cart-container .amount-description {
+  padding: 10px 5px;
+}
+
 .phone-list-item {
 }
 

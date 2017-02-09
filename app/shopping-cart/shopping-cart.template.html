@@ -1,5 +1,6 @@
 <div id="shopping-cart-container" class='row'>
   <div class="col-md-9">
+    <div ng-show="$ctrl.showEmptyCartMsg">Your shopping cart is empty! Browse our <a href="#!/phones">products</a>.</div>
     <div ng-repeat="phone in $ctrl.phones | filter:$ctrl.query | orderBy:$ctrl.orderProp"
       class="thumbnail row">
       <div class="col-md-2">
@@ -12,7 +13,7 @@
         <p>{{ phone.description }}</p>
       </div>
       <div class="col-md-2">
-        <p>Amount: <span class="amount">{{ phone.amount }}</span></p>
+        <p class="bg-info amount-description">Amount: <span class="amount">{{ phone.amount }}</span></p>
       </div>
     </div>
   </div>

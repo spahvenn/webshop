@@ -1,6 +1,5 @@
 'use strict';
 
-// Register `phoneDetail` component, along with its associated controller and template
 angular.
   module('shoppingCart').
   component('shoppingCart', {
@@ -18,6 +17,10 @@ angular.
             method: 'GET',
           }));
         });
+
+        if (promises.length === 0) {
+          this.showEmptyCartMsg = true;
+        }
 
         $q.all(promises)
         .then(function(responses) {

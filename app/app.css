@@ -6,6 +6,10 @@ body {
   padding-bottom: 20px;
 }
 
+#shopping-cart-container .amount {
+  font-weight: bold;
+}
+
 .phone-list-item {
 }
 

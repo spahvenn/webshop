@@ -36,7 +36,8 @@ angular.
           }
 
           if (_.isEmpty(self.itemData)) {
-            self.shoppingCartItems.push({id: this.phoneId, amount: 1});
+            self.itemData = {id: this.phoneId, amount: 1};
+            self.shoppingCartItems.push(self.itemData);
           } else {
             self.itemData.amount += 1;
           }

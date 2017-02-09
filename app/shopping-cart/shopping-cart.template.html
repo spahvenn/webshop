@@ -1,1 +1,22 @@
-<p>this is shopping cart template</p>
+<div id="shopping-cart-container" class='row'>
+  <div class="col-md-9">
+    <div ng-repeat="phone in $ctrl.phones | filter:$ctrl.query | orderBy:$ctrl.orderProp"
+      class="thumbnail row">
+      <div class="col-md-2">
+        <a href="#!/phones/{{phone.id}}" class="thumb">
+          <img ng-src="{{phone.images[0]}}" alt="{{phone.name}}" />
+        </a>
+      </div>
+      <div class="col-md-8">
+        <a href="#!/phones/{{phone.id}}">{{phone.name}}</a>
+        <p>{{ phone.description }}</p>
+      </div>
+      <div class="col-md-2">
+        <p>Amount: <span class="amount">{{ phone.amount }}</span></p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+
+  </div>
+</div>

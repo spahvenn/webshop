@@ -5,7 +5,7 @@ angular.
   component('phones', {
     templateUrl: 'phones/phones.template.html',
     controller: ['Phone',
-      function PhoneListController(Phone) {
+      function PhonesController(Phone) {
         this.phones = Phone.query();
         this.orderProp = 'age';
       }

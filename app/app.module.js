@@ -6,6 +6,7 @@ angular.module('webshop', [
   'phones',
   'phoneDetail',
   'shoppingCart',
+  'about',
   'carousel',
   'core',
   'ngAnimate',

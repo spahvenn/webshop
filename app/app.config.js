@@ -18,6 +18,9 @@ angular.
       .when('/shopping-cart', {
         template: '<shopping-cart></shopping-cart>'
       })
+      .when('/about', {
+        template: '<about></about>'
+      })
       .otherwise({redirectTo: '/home'});
     }
   ]);

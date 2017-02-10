@@ -1,7 +1,7 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+      <button type="button" class="navbar-toggle collapsed" ng-click="isNavCollapsed = !isNavCollapsed" aria-expanded="false" aria-controls="navbar">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -9,20 +9,20 @@
       </button>
       <a class="navbar-brand" href="#">Webshop</a>
     </div>
-    <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
-    <ul class="nav navbar-nav">
-      <li>
-        <a data-toggle="collapse" data-target="#navbar" href="#!/phones">Phones</a>
-      </li>
-      <li>
-        <a data-toggle="collapse" data-target="#navbar" href="#!/shopping-cart">
-          Shopping Cart <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
-        </a>
-      </li>
-      <li>
-        <a data-toggle="collapse" data-target="#navbar" href="#!/about">About</a>
-      </li>
-    </ul>
-  </div>
+    <div id="navbar" class="navbar-collapse collapse" uib-collapse="isNavCollapsed" aria-expanded="false" style="height: 1px;">
+      <ul class="nav navbar-nav">
+        <li>
+          <a ng-click="isNavCollapsed=true" href="#!/phones">Phones</a>
+        </li>
+        <li>
+          <a ng-click="isNavCollapsed=true" href="#!/shopping-cart">
+            Shopping Cart <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+          </a>
+        </li>
+        <li>
+          <a ng-click="isNavCollapsed=true" href="#!/about">About</a>
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>

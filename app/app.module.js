@@ -2,6 +2,7 @@
 
 angular.module('webshop', [
   'ngRoute',
+  'navigation',
   'home',
   'phones',
   'phoneDetail',

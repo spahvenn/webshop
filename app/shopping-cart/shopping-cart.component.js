@@ -13,7 +13,7 @@ angular.
         var promises = [];
         _.each(itemIds, function(itemId) {
           promises.push($http({
-            url: '/phones-data/' + itemId + '.json',
+            url: 'phones-data/' + itemId + '.json',
             method: 'GET',
           }));
         });

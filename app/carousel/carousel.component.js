@@ -3,7 +3,7 @@ angular.module('webshop')
     templateUrl: 'carousel/carousel.template.html',
     controller: ['$scope',
       function CarouselController($scope) {
-        $scope.interval = 4000;
+        $scope.interval = 3500;
         $scope.noWrapSlides = false;
         $scope.active = 0;
         $scope.slides = [];

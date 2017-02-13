@@ -17,7 +17,7 @@ angular.module('webshop')
             itemAmount += newShoppingCartItem.amount;
           });
           $scope.cartItemAmount = itemAmount;
-        });
+        }, true);
 
       }
     ]

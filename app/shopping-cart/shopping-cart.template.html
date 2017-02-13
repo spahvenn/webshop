@@ -1,7 +1,11 @@
 <div id="shopping-cart-container" class='row'>
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Shopping Cart</h1>
+      <p ng-hide="$ctrl.showEmptyCartMsg">Your shopping cart items:</p>
+    </div>
+  </div>
   <div class="col-md-9">
-    <h1>Shopping Cart</h1>
-    <p ng-hide="$ctrl.showEmptyCartMsg">Your shopping cart items:</p>
     <div ng-show="$ctrl.showEmptyCartMsg">Your shopping cart is empty! Browse our <a href="#!/phones">products</a>.</div>
     <div ng-repeat="phone in $ctrl.phones | filter:$ctrl.query | orderBy:$ctrl.orderProp"
       class="thumbnail row">
@@ -14,8 +18,9 @@
         <a href="#!/phones/{{phone.id}}">{{phone.name}}</a>
         <p>{{ phone.description }}</p>
       </div>
-      <div class="col-md-2">
-        <p class="bg-info amount-description">Amount: <span class="amount">{{ phone.amount }}</span></p>
+      <div class="col-md-2 bg-info">
+        <p>Price: {{ phone.price }}</p>
+        <p class="amount-description">Amount: <span class="amount">{{ phone.amount }}</span></p>
       </div>
     </div>
   </div>

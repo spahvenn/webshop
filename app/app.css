@@ -6,10 +6,6 @@ body {
   padding-bottom: 20px;
 }
 
-#shopping-cart-container .amount {
-  font-weight: bold;
-}
-
 .carousel-caption p {
   font-size: 20px;
 }
@@ -18,8 +14,8 @@ body {
   margin-bottom: 10px;
 }
 
-#shopping-cart-container .amount-description {
-  padding: 10px 5px;
+#phone-detail-price {
+  font-size: 18px;
 }
 
 .phone-list-item {

@@ -43,6 +43,15 @@ body {
   margin-bottom: 10px;
 }
 
+#navbar #shopping-cart-item-amount {
+  position: relative;
+  bottom: 1px;
+  background-color: red;
+  color: white;
+  padding: 0px 4px;
+  border-radius: 5px;
+}
+
 @media (min-width: 992px) {
   .phone-list-item a > img {
       height: 120px;

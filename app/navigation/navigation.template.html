@@ -16,7 +16,9 @@
         </li>
         <li>
           <a ng-click="isNavCollapsed=true" href="#!/shopping-cart">
-            Shopping Cart <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+            Shopping Cart
+            <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+            <span id="shopping-cart-item-amount">{{ cartItemAmount }}</span>
           </a>
         </li>
         <li>

@@ -1,4 +1,9 @@
 'use strict';
 
 // Define the `core` module
-angular.module('core', ['core.phone', 'core.shoppingCartBtn']);
+angular.module('core',
+  [
+    'core.phone',
+    'core.shoppingCartBtn',
+    'core.shoppingCartItems'
+  ]);

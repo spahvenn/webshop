@@ -5,8 +5,8 @@ angular.
   module('core.shoppingCartBtn').
   component('shoppingCartBtn', {
     templateUrl: 'core/shopping-cart-btn/shopping-cart-btn.template.html',
-    controller: ['$routeParams', '$cookies',
-      function ShoppingCartBtnController($routeParams, $cookies) {
+    controller: ['$routeParams', '$cookies', 'ShoppingCartItems',
+      function ShoppingCartBtnController($routeParams, $cookies, ShoppingCartItems) {
 
         var self = this;
         this.phoneId = $routeParams.phoneId
@@ -43,6 +43,7 @@ angular.
           }
 
           $cookies.putObject('shoppingCartItems', this.shoppingCartItems);
+          ShoppingCartItems.setItems(this.shoppingCartItems);
         }
 
       }

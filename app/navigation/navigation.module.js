@@ -1,1 +1,1 @@
-angular.module('navigation', []);
+angular.module('navigation', ['ngCookies', 'core.shoppingCartItems']);

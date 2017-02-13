@@ -7,7 +7,7 @@ angular.module('webshop')
       function NavigationController($scope, $cookies, ShoppingCartItems) {
 
         $scope.isNavCollapsed = true;
-        $scope.cartItemAmount = ShoppingCartItems.getItems().length;
+        $scope.cartItemAmount = ShoppingCartItems.getItems() ? ShoppingCartItems.getItems().length : 0;
 
         $scope.$watch(function() {
           return ShoppingCartItems.getItems();

@@ -4,5 +4,5 @@
 
 Experimenting with angular using [angular-seed](https://github.com/angular/angular-seed) project as a base. Loans some code, images and markup from [angular-phonecat](https://github.com/angular/angular-phonecat).
 
-
+Live demo available at [http://samiahvenniemi.fi/webshop](http://samiahvenniemi.fi/webshop).
 

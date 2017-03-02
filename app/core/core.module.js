@@ -5,5 +5,6 @@ angular.module('core',
   [
     'core.phone',
     'core.shoppingCartBtn',
-    'core.shoppingCartItems'
+    'core.shoppingCartItems',
+    'core.shoppingCartAddRemoveBtn'
   ]);

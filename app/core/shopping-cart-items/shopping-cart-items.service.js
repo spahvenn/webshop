@@ -3,19 +3,26 @@
 angular.module('core.shoppingCartItems')
   .factory('ShoppingCartItems', ['$cookies', function ($cookies) {
 
-    var service = {};
-    service.items = [];
+    var self = {};
+    self.items = [];
 
     // Initialize
-    service.items = $cookies.getObject('shoppingCartItems');
+    self.items = $cookies.getObject('shoppingCartItems');
 
-    service.setItems = function(items) {
-      service.items = items;
+    self.setItems = function(items) {
+      self.items = items;
     };
     
-    service.getItems = function() {
-      return service.items;
-    }
+    self.getItems = function() {
+      return self.items;
+    };
 
-    return service;
+    self.getItemById = function(itemId) {
+      var item = _.find(self.items, function(item) {
+        return item.id === itemId;
+      });
+      return item;
+    };
+
+    return self;
 }]);

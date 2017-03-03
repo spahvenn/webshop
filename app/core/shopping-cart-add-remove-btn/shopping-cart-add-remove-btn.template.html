@@ -1,1 +1,6 @@
-<button ng-click="$ctrl.changeItemCartAmount()" class="add-to-cart-btn btn btn-primary">Add to cart</button>
+<!-- todo: buttonin css class sen mukaan onko remove vai add -->
+<button
+  ng-click="$ctrl.changeItemCartAmount()"
+  class="add-to-cart-btn btn" ng-class="$ctrl.btnType === 'add' ? 'btn-primary' : 'btn-danger'">
+  {{ $ctrl.text }}
+</button>

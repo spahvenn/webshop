@@ -4,7 +4,6 @@
 angular.module('core',
   [
     'core.phone',
-    'core.shoppingCartBtn',
     'core.shoppingCartItems',
     'core.shoppingCartAddRemoveBtn'
   ]);

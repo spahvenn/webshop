@@ -21,8 +21,8 @@
       <div class="col-md-2 bg-info">
         <p>Price: {{ phone.price }}</p>
         <p class="amount-description">Amount: <span class="amount">{{ phone.amount }}</span></p>
-        <button class="btn btn-danger">-</button>
-        <button class="btn btn-primary">+</button>
+        <shopping-cart-add-remove-btn phone-id="{{ phone.id }}" btn-type="remove" text="-"></shopping-cart-add-remove-btn>
+        <shopping-cart-add-remove-btn phone-id="{{ phone.id }}" btn-type="add" text="+"></shopping-cart-add-remove-btn>
       </div>
     </div>
   </div>

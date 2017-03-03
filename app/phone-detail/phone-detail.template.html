@@ -11,7 +11,7 @@
 
     <div>
       <p id="phone-detail-price">Price: {{ $ctrl.phone.price }}</p>
-      <shopping-cart-add-remove-btn btn-type="add" phone-id="{{ $ctrl.phoneId }}"></shopping-cart-add-remove-btn>
+      <shopping-cart-add-remove-btn btn-type="add" text="Add to cart" phone-id="{{ $ctrl.phoneId }}"></shopping-cart-add-remove-btn>
       <p ng-show="$ctrl.itemAmount > 0" class="bg-info">Products in cart: {{ $ctrl.itemAmount }}</p>
     </div>
   </div>

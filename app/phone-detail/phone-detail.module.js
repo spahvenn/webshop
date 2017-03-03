@@ -4,6 +4,5 @@
 angular.module('phoneDetail', [
   'ngRoute',
   'core.phone',
-  'core.shoppingCartBtn',
   'core.shoppingCartItems'
 ]);

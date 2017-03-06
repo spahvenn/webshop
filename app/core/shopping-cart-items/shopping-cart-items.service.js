@@ -55,7 +55,7 @@ angular.module('core.shoppingCartItems')
 
     self.reduceFromCart = function(itemId) {
       var itemData = _.find(self.items, function(item) {
-        return item.id = itemId;
+        return item.id === itemId;
       });
 
       var newItems;

@@ -7,7 +7,7 @@
 <div class="row">
   <div class="col-md-9">
     <div ng-if="$ctrl.phones.length === 0">Your shopping cart is empty! Browse our <a href="#!/phones">products</a>.</div>
-    <div ng-repeat="phone in $ctrl.phones | filter:$ctrl.query | orderBy:$ctrl.orderProp"
+    <div ng-repeat="phone in $ctrl.phones track by phone.id"
       class="thumbnail row">
       <div class="col-md-2">
         <a href="#!/phones/{{phone.id}}" class="thumb">

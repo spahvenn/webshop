@@ -20,10 +20,6 @@ angular.module('shoppingCart').component('shoppingCart', {
           }));
         });
 
-        if (promises.length === 0) {
-          ctrl.showEmptyCartMsg = true;
-        }
-
         $q.all(promises)
           .then(function (responses) {
             var phones = [];
@@ -54,9 +50,6 @@ angular.module('shoppingCart').component('shoppingCart', {
             });
           });
           ctrl.phones = newPhones;
-          if (newPhones.length === 0) {
-            ctrl.showEmptyCartMsg = true;
-          }
         }, true);
 
       }

@@ -7,6 +7,14 @@ angular.module('shoppingCart').component('shoppingCart', {
 
       var ctrl = this;
 
+      var updateTotalPrice = function(phones) {
+        var totalPrice = 0;
+        _.each(phones, function(phone) {
+          totalPrice += phone.amount * phone.price;
+        });
+        ctrl.totalPrice = totalPrice;
+      };
+
       ctrl.$onInit = function () {
 
         ctrl.shoppingCartItems = $cookies.getObject('shoppingCartItems');
@@ -34,6 +42,8 @@ angular.module('shoppingCart').component('shoppingCart', {
               });
             });
             ctrl.phones = phones;
+            // also update totalPrice
+            updateTotalPrice(ctrl.phones);
           });
 
         // Update ctrl.phones contents (items and amounts)
@@ -50,11 +60,11 @@ angular.module('shoppingCart').component('shoppingCart', {
             });
           });
           ctrl.phones = newPhones;
+          updateTotalPrice(ctrl.phones);
+
         }, true);
 
       }
-
-
     }
   ]
 });

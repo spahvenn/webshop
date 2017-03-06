@@ -26,14 +26,21 @@
         <p>{{ phone.description }}</p>
       </div>
       <div class="col-md-2 bg-info">
-        <p>Price: {{ phone.price }}</p>
-        <p class="amount-description">Amount: <span class="amount">{{ phone.amount }}</span></p>
+        <p>Price: {{ phone.amount }} x {{ phone.price }} &euro;</p>
+        <p>Total: <span class="amount">{{ phone.amount * phone.price }} &euro;</span></p>
         <shopping-cart-add-remove-btn phone-id="{{ phone.id }}" btn-type="remove" text="-"></shopping-cart-add-remove-btn>
         <shopping-cart-add-remove-btn phone-id="{{ phone.id }}" btn-type="add" text="+"></shopping-cart-add-remove-btn>
       </div>
     </div>
+    <div ng-if="$ctrl.phones.length > 0" class="row">
+      <div class="col-md-12">
+        <div class="pull-right" style="font-weight: bold;">
+          Total: {{ $ctrl.totalPrice }} &euro;
+        </div>
+      </div>
+    </div>
   </div>
   <div class="col-md-3">
-
   </div>
 </div>
+

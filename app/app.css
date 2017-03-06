@@ -6,6 +6,10 @@ body {
   padding-bottom: 20px;
 }
 
+#shopping-cart-checkout-btn-container {
+  margin-bottom: 6px;
+}
+
 .carousel-caption p {
   font-size: 20px;
 }

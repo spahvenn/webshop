@@ -6,3 +6,4 @@ Experimenting with angular using [angular-seed](https://github.com/angular/angul
 
 Live demo available at [http://samiahvenniemi.fi/webshop](http://samiahvenniemi.fi/webshop).
 
+Keywords: Angular 1.6, Components, e2e testing, Travis CI, Twitter Bootstrap, UI Bootstrap, SPA, angular-seed
